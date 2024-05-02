@@ -1091,7 +1091,7 @@ technologies = {
 		}
 
 		research_cost = 1
-		start_year = 1942
+		start_year = 1940
 
 		folder = {
 			name = nsb_jap_armor_folder
