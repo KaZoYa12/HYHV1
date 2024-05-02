@@ -237,8 +237,8 @@ ideas = {
 					has_government = communism
 				}
 			}
-			modifier = { 
-				conscription_factor = 0.02
+			modifier = {
+				conscription = 0.02
 			}
 			equipment_bonus = {
 				artillery_equipment = {

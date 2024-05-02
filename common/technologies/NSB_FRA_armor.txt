@@ -1187,7 +1187,7 @@ technologies = {
 		}
 
 		research_cost = 1
-		start_year = 1942
+		start_year = 1939
 
 		folder = {
 			name = nsb_fra_armor_folder
