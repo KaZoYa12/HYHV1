@@ -422,12 +422,6 @@ on_actions = {
 						option = HISTORICAL
 					}
 				}
-				BRA = {
-					add_ideas =	neutrality_idea	
-					add_ideas =	free_trade
-					add_ideas =	no_spies_idea
-					add_ideas =	developing_country
-				}
 				MEX = {
 					add_ideas =	neutrality_idea	
 					add_ideas =	free_trade
@@ -494,12 +488,6 @@ on_actions = {
 						rule = disable_lobby_parasites
 						option = DEFAULT
 					}
-				}
-				BRA = {
-					add_ideas =	neutrality_idea	
-					add_ideas =	free_trade
-					add_ideas =	no_spies_idea
-					add_ideas =	developing_country
 				}
 				MEX = {
 					add_ideas =	neutrality_idea	
