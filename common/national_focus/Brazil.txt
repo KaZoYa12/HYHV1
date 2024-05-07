@@ -2583,8 +2583,6 @@ focus = {
 
 		completion_reward = {
 			add_war_support = 0.05
-			custom_effect_tooltip = available_manpower_law
-			show_ideas_tooltip = wartime_conscription
 			random_owned_controlled_state= {
 				prioritize = { 276 }
 				add_extra_state_shared_building_slots = 4
@@ -2636,15 +2634,6 @@ focus = {
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = BRA_modify_army_spirit_tt
-			add_to_variable = {
-				BRA_army_org_factor_var = 0.1
-				tooltip = BRA_org_tt1
-			}
-			add_to_variable = {
-				BRA_army_speed_factor_var = 0.05
-				tooltip = BRA_speed_tt1
-			}
 		}
 	}
 
@@ -2681,7 +2670,7 @@ focus = {
 				uses = 1
 				category = land_doctrine
 			}
-			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 500	producer = BRA }
+			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 250	producer = BRA }
 		}
 	}
 
@@ -2715,7 +2704,7 @@ focus = {
 		   # custom_effect_tooltip = available_designer
 			#show_ideas_tooltip = montreal_locomotive_works_BRA
 
-			276 = {
+			500 = {
 				remove_building = {
 					type = industrial_complex
 					level = 1
@@ -2758,7 +2747,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		    add_ideas = BRA_the_cmp
+		    add_equipment_to_stockpile = { type = transport_plane_equipment amount = 150 producer = USA }
 		}
 	}
 
@@ -3004,13 +2993,17 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = BRA_firepower_focus_general_staff
+			swap_ideas = {
+				remove_idea = BRA_shadow_civil_war
+				add_idea = BRA_shadow_civil_war_SF 
+			}
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
+
 		}
 	}
 
@@ -3158,6 +3151,10 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = BRA_shadow_civil_war_SF
+				add_idea = BRA_shadow_civil_war_SF_left 
+			}
 		    add_tech_bonus = {
 				name = BRA_recon_bonus
 				bonus = 1
@@ -3167,8 +3164,8 @@ focus = {
 
 			add_tech_bonus = {
 				name = BRA_artillery_radio_bonus
-				bonus = 1
-				uses = 1
+				bonus = 1.5
+				uses = 2
 				technology = artillery_radio
 			}
 		}
@@ -3201,8 +3198,10 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		    set_technology = { BRA_infantry_radio_2 = 1 }
-			custom_effect_tooltip = BRA_infantry_radio_2_tech_tt
+				custom_effect_tooltip = to_hell_and_back_tt
+				hidden_effect = {
+					set_technology = { to_hell_and_back = 1 }
+				}
 		}
 	}
 
@@ -3233,6 +3232,10 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = BRA_shadow_civil_war
+				add_idea = BRA_shadow_civil_war_SF_right 
+			}
 		    add_tech_bonus = {
 				name = BRA_artillery_bonus
 				uses = 2
@@ -3270,52 +3273,16 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_tech = early_cupola
-					}
-				}
-				set_technology = {
-					early_cupola = 1
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_tech = turret_basket
-					}
-				}
-				set_technology = {
-					turret_basket = 1
-				}
-			}
-		    create_equipment_variant = {
-				name = "Bishop"
-				type = medium_tank_rocket_chassis_1939
-				allow_without_tech = yes
-				parent_version = 1
-				modules = {
-					main_armament_slot = tank_medium_close_support_gun
-					turret_type_slot = tank_medium_casemate_turret
-					suspension_type_slot = tank_bogie_suspension
-					armor_type_slot = tank_riveted_armor
-					armor_sloping_slot = unsloped_armor
-					engine_type_slot = tank_gasoline_engine
-					radio_slot = tank_radio_1
-					special_type_slot_1 = external_fuel_tank
-					special_type_slot_2 = basket
-					special_type_slot_3 = early_cupola
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 6
-					tank_nsb_armor_upgrade = 3
-				}
-				icon = "gfx/interface/technologies/land/eng/bishop.tga"
-				
-			}
-			custom_effect_tooltip = "1939 Assault Gun"
-			add_equipment_to_stockpile = { type = medium_tank_rocket_chassis amount = 100 producer = BRA }   
+			set_technology = { 
+		paratroopers = 1
+		paratroopers2 = 1
+		marines = 1
+		marines2 = 1
+		tech_mountaineers = 1
+		tech_mountaineers2 = 1
+		tech_light_infantry = 1
+		tech_light_infantry2 = 1
+	   } 
 		}
 	}
 
@@ -3347,23 +3314,10 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			custom_effect_tooltip = AST_orc_tt1
 			hidden_effect = {
-				set_technology = { BRA_infantry_hp = 1 } 
-			}
-			custom_effect_tooltip = BRA_infantry_hp_focus_tt
-			custom_effect_tooltip = BRA_modify_army_spirit_tt
-			add_to_variable = {
-				BRA_experience_loss_factor_var = -0.30
-				tooltip = BRA_xploss_tt1
-			}
-			random_owned_controlled_state= {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+				set_technology = { AST_orkbonus = 1 }
+			}	
 		}
 	}
 
@@ -3403,20 +3357,6 @@ focus = {
 				category = land_doctrine
 			}
 			army_experience = 25
-			custom_effect_tooltip = BRA_modify_army_spirit_tt
-			add_to_variable = {
-				BRA_max_planning_var = 0.05
-				tooltip = BRA_maxplan_tt1
-			}
-			add_to_variable = {
-				BRA_max_dig_in_var = 2
-				tooltip = BRA_digin_tt1
-			}
-			#add_ideas = BRA_general_staff
-			hidden_effect = {
-				remove_ideas = BRA_conscription_question_1
-			}
-			custom_effect_tooltip = BRA_BRA_do_more_conscript_tt
 			
 		}
 	}
@@ -3448,26 +3388,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			#add_ideas = BRA_every_man_will_do_his_duty
-			custom_effect_tooltip = BRA_modify_industry_spirit_tt
-			add_to_variable = {
-				BRA_production_factory_max_efficiency_factor_var = -0.05
-				tooltip = BRA_cap_tt1
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_completed_focus = BRA_national_resources_mobilization_act
-					}
-				}
-				add_ideas = extensive_conscription
-			}
-			if = {
-				limit = {
-					has_completed_focus = BRA_national_resources_mobilization_act
-				}
-				add_ideas = wartime_conscription
-			}
+			
 		}
 	}
 
@@ -3497,7 +3418,6 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = BRA_pacific_focused_deployment
 		}
 	}
 
@@ -3602,72 +3522,6 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_tech = early_cupola
-					}
-				}
-				set_technology = {
-					early_cupola = 1
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_tech = turret_basket
-					}
-				}
-				set_technology = {
-					turret_basket = 1
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_tech = armour_sloping3
-					}
-				}
-				set_technology = {
-					armour_sloping3 = 1
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_tech = medium_gun2
-					}
-				}
-				set_technology = {
-					medium_gun2 = 1
-				}
-			}
-			create_equipment_variant = {
-				name = "Grizzly"
-				type = medium_tank_chassis_1942
-				allow_without_tech = yes
-				parent_version = 0
-				modules = {
-				main_armament_slot = tank_medium_BRAnon_2
-				turret_type_slot = tank_medium_three_man_tank_turret
-				suspension_type_slot = tank_bogie_suspension
-				armor_type_slot = tank_welded_armor
-				armor_sloping_slot = sloped_armor
-				engine_type_slot = tank_gasoline_engine
-				radio_slot = tank_radio_1
-				special_type_slot_1 = easy_maintenance
-				special_type_slot_2 = basket
-				special_type_slot_3 = early_cupola
-				special_type_slot_4 = stabilizer
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 7
-					tank_nsb_armor_upgrade = 5
-				}
-				icon = "gfx/interface/technologies/Grizzly_MkI-1.tga"
-				
-			}
-			custom_effect_tooltip = "1942 Medium Tank Chassis"
 		}
 	}
 
@@ -3700,33 +3554,6 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = BRA_modify_army_spirit_tt
-			add_to_variable = {
-				BRA_army_attack_factor_var = 0.05
-				tooltip = BRA_attack_tt1
-			}
-			add_to_variable = {
-				BRA_army_defence_factor_var = 0.05
-				tooltip = BRA_def_tt1
-			}
-			add_to_variable = {
-				BRA_max_dig_in_var = 2
-				tooltip = BRA_digin_tt1
-			}
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
-			random_owned_controlled_state= {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
 		}
 	}
 	
