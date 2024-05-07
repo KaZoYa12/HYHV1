@@ -121,7 +121,7 @@ focus_tree = {
 			
 			add_days_mission_timeout = {
 				mission = USA_social_security_act_mission
-				days = -100
+				days = -200
 			}
 			custom_effect_tooltip = USA_2_tt
 		}
@@ -168,7 +168,7 @@ focus_tree = {
 			}
 			add_days_mission_timeout = {
 				mission = USA_federal_housing_act_mission
-				days = -75
+				days = -225
 			}
 			custom_effect_tooltip = USA_4_tt
 		}
@@ -203,7 +203,7 @@ focus_tree = {
 			}
 			add_days_mission_timeout = {
 				mission = USA_federal_housing_act_mission
-				days = -125
+				days = -325
 			}
 			custom_effect_tooltip = USA_infra_tt
 		}
@@ -295,11 +295,11 @@ focus_tree = {
 			add_political_power = 150
 			add_days_mission_timeout = {
 				mission = USA_fair_labour_standard_act_mission
-				days = -150
+				days = -200
 			}
 			add_days_mission_timeout = {
 				mission = USA_federal_housing_act_mission
-				days = -50
+				days = -100
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = USA_henry_stimson
@@ -927,7 +927,7 @@ focus_tree = {
 			add_political_power = 200
 			add_days_mission_timeout = {
 				mission = USA_social_security_act_mission
-				days = -50
+				days = -250
 			}
 		}
 	}
