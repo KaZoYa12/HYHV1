@@ -1185,7 +1185,6 @@ GER_recruit_workers_USSR:0 "Recruit Workers in the Soviet Territories"
  AST_victory_program_2:0 "§YVictory Program§!: Naval Production Effort"
  AST_victory_program_3:0 "§YVictory Program§!: More Factory Shifts"
  AST_victory_program_4:0 "§YVictory Program§!: Victory or Defeat!"
- BRZ_victory_program_1:0 "Production Effort"
  USA_victory_program_flag:0 "Running a Victory Program"
  USA_selected_service_act_mission:0 "Selected Service Act"
  USA_navy_industry_mobilization:0 "§YNaval Industry§!: Mobilization"
@@ -1396,6 +1395,7 @@ AST_holden_subsidised:0 "Holden Subsidised"
 AST_1940_elections:0 "1940 Elections Concluded"
 AST_37_elections:0 "1937 Elections Concluded"
 
+<<<<<<< HEAD
 BRA_house_of_representatives:0 "BRAZIL Government Policies"
 BRA_house_of_representatives_desc:0 "Public policy is an institutionalized proposal or a decided set of elements like laws, regulations, guidelines, and actions to solve or address relevant and real-world problems, guided by a conception."
 
@@ -1412,12 +1412,13 @@ BRA_focus_labor_on_artillery_production:0 "Focus Labour to Artillery Production"
 BRA_focus_labor_on_infantry_eq_production:0 "Focus Labour to Infantry Equipment Production"
 BRA_focus_labor_on_tank_production:0 "Focus Labour to Armor Production"
 BRA_focus_labor_on_motor_production:0 "Focus Labour to Motor Industry"
-BRA_house_of_representatives:0"House of representative"
 BRA_policy_on:0 "Ongoing Policy"
 BRA_holden_subsidised:0 "Holden Subsidised"
 BRA_1940_elections:0 "1940 Elections Concluded"
 BRA_37_elections:0 "1937 Elections Concluded"
 BRA_victory_program_1:0"Victory Program"
 
+=======
+>>>>>>> 96e2f3825e935d83ffef08c41ef0ce4b62cd5fb4
  eng_giblrt:0 "Building fortifications and airports in North Africa and Gibraltar"
 
